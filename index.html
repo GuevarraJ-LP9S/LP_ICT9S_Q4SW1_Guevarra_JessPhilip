@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating a Web Page with Javascript</title>
+</head>
+	<style>
+		.hal {
+			font-size: 25px;
+			align-content: center;
+			font-family: Goudy Old Style;
+		}
+		.values {
+			font-size: 25px;
+			text-align: center;
+			font-family: Goudy Old Style;
+		}
+		.flex-parent-element {
+ 			display: flex;
+			width: 100%;
+		}
+
+		.flex-child-element {
+			flex: 1;
+			border: 5px solid forestgreen;
+			margin: 10px;
+		}
+
+		.flex-child-element:first-child {
+			margin-right: 20px;
+		}
+	</style>
+<body>
+	<div class="flex-parent-element">
+ 		<div class="flex-child-element magenta"><img src="owl.png"></div>
+ 		<div class="flex-child-element green">
+ 			<p class="hal">Good day students! I am Penagogue Hoots and today I will teach you how to solve for Arithmetic, Comparison, and Logical Mathematical equations!</p>
+ 			<br>
+ 			<p class="hal"> Input a value into the two boxes below and press one of the 4 buttons to receive an answer!
+ 			<br>
+ 				<form>
+ 				<br>
+  					<label for="v1" class="values">VALUE X:</label><br>
+  						<input type="number" id="num1" name="v1">
+  						<br>
+  						<br>
+  						<label for="v2" class="values">VALUE Y:</label><br>
+  						<input type="number" id="num2" name="v2">
+  				<br>
+				</form>
+ 		</div>
+	</div>
+	<div>
+		<center>
+			<button class="btn btn-success btn-lg" onclick="plus()">Add the Values</button>
+			<button class="btn btn-warning btn-lg" onclick="minus()">Subtract the Values</button>
+			<button class="btn btn-info btn-lg" onclick="multi()">Multiply the Values</button>
+			<button class="btn btn-danger btn-lg" onclick="div()">Divide the Values</button>
+		</center>
+	</div>
+	<script type="text/javascript">
+		function plus (){
+			var num1 =
+			document.getElementById("num1").value;
+			var num2 =
+			document.getElementById("num2").value;
+			var sum = Number(num1) + Number(num2);
+			window.alert("The sum is:"+ sum)
+		}
+		function minus (){
+			var num1 =
+			document.getElementById("num1").value;
+			var num2 =
+			document.getElementById("num2").value;
+			var diff = Number(num1) - Number(num2);
+			window.alert("The difference is:"+ diff)
+		}
+		function multi (){
+			var num1 =
+			document.getElementById("num1").value;
+			var num2 =
+			document.getElementById("num2").value;
+			var multi = Number(num1) * Number(num2);
+			window.alert("The product is:"+ multi)
+		}
+		function div (){
+			var num1 =
+			document.getElementById("num1").value;
+			var num2 =
+			document.getElementById("num2").value;
+			var div = Number(num1) / Number(num2);
+			window.alert("The difference is:"+ div)
+		}
+	</script>
+</body>
+</html>
